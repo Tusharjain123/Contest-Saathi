@@ -1,0 +1,51 @@
+.container_{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+    padding: 36px 4vw;
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 14vh;
+}
+
+.cont{
+    margin: 10px 5px;
+}
+
+.cont>label{
+    margin-right: 20px;
+}
+
+.cont>input{
+    width: 26vw;
+    background: transparent;
+    outline: none;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-top: 1.5vh;
+}
+
+.btn__{
+    width: fit-content;
+    height: fit-content;
+    word-wrap: normal;
+    padding: 3px 5px;
+    border-radius: 20px;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    outline: none;
+    margin-top: 5vh;
+}
+
+label[for=email] {
+    margin-right: 11px;
+}
+
+.container_>.heading{
+    margin-bottom: 2.5vh;
+}

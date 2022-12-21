@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.aboutus{
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    border: 1px solid white;
+    padding: 3vh 10px;
+    text-align: center;
+    width: 32vw;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 5vh;
+    transition: 1.5s;
+    min-width: 200px;
+    height: fit-content;
+} 
+
+.aboutus h1{
+    text-decoration: underline;
+    font-size: 1.8vw;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.aboutus p{
+    margin-top: 5vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    font-size: 1.4vw;
+}
+
+.aboutus a{
+    text-decoration: none;
+}
+
+.aboutus:hover {
+    transform: scale(1.2);
+}
+
+.btn_{
+    font-size: 1.8vw ;
+    padding: 7px 7px;
+    color: white;
+    outline: 1px;
+    border-color: white;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: -2px -2px rgba(255, 255, 255,0.6);
+    transition: 1s;
+}
+
+.btn_:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px rgba(189, 188, 188, 0.6);
+}
+
+.btn_>Link{
+    width: fit-content;
+    height: fit-content;
+}
