@@ -3,6 +3,7 @@ import Spinner from './Spinner'
 import "../requiredData/contest.css"
 import Elements from './Elements'
 import atcoder from "../requiredData/atcoder.png"
+
 export default function Data() {
     const [check, setCheck] = useState(false)
     const [loader, setLoader] = useState(false)
@@ -20,7 +21,6 @@ export default function Data() {
                 status: "None"
             }]
             )
-            console.log(data)
         }
         else {
             setData(dat)
@@ -51,34 +51,37 @@ export default function Data() {
     return (
         <div>
             {/* First Row content */}
-            <div className="container text-dark rounded p-4" style={{ backgroundColor: "#cfe2ff" }}>
-                <h1 className='text-center' style={{ marginBottom: "2vh" }}>Select the contest website</h1>
-                <div class="d-flex justify-content-around align-items-center flex-wrap">
-                    <div className='image' style={{padding: "20px 1vw"}} >
-                        <img style={{ width: "11vw", height: "fit-content"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Codeforces_logo.svg/2560px-Codeforces_logo.svg.png" alt="codeforces" onClick={handleClick} />
+            <div className="container text-dark rounded p-4" style={{ backgroundColor: "transparent", minWidth: "551px" }}>
+                <h1 className='text-center' style={{ marginBottom: "2vh", color: "white" }}>Select the contest website</h1>
+                <div className="d-flex justify-content-around align-items-center flex-wrap">
+                    <div className='image' style={{padding: "20px 1vw", backgroundColor : "white", margin: "10px"}} >
+                        <img style={{ width: "168px", height: "fit-content"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Codeforces_logo.svg/2560px-Codeforces_logo.svg.png" alt="codeforces" onClick={handleClick} />
                     </div>
-                    <div className='image'  style={{padding: "15px 1vw"}}>
-                        <img style={{ width: "11vw", height: "fit-content"}} src="https://static-fastly.hackerearth.com/static/hackerearth/images/logo/HE_logo.png" alt="hacker_earth" onClick={handleClick} />
+                    <div className='image'  style={{padding: "15px 1vw", backgroundColor : "white", margin: "10px"}}>
+                        <img style={{ width: "168px", height: "fit-content"}} src="https://static-fastly.hackerearth.com/static/hackerearth/images/logo/HE_logo.png" alt="hacker_earth" onClick={handleClick} />
                     </div>
-                    <div className='image'  style={{padding: "11px 1vw"}}>
-                        <img style={{ width: "11vw", height: "fit-content" }} src="https://assets.leetcode.com/static_assets/public/webpack_bundles/images/logo-dark.e99485d9b.svg" alt="leet_code" onClick={handleClick} />
+                    <div className='image'  style={{padding: "11px 1vw", backgroundColor : "white", margin: "10px"}}>
+                        <img style={{ width: "168px", height: "fit-content" }} src="https://assets.leetcode.com/static_assets/public/webpack_bundles/images/logo-dark.e99485d9b.svg" alt="leet_code" onClick={handleClick} />
                     </div>
-                    <div className='image'  style={{padding: "9px 1vw"}}>
-                        <img style={{ width: "11vw", height: "fit-content" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuUM6Vi-MrqR5rLO93d_UNy920Cr4JKt60w&usqp=CAU" alt="kick_start" onClick={handleClick} />
+                    <div className='image'  style={{padding: "9px 1vw", backgroundColor : "white", margin: "10px"}}>
+                        <img style={{ width: "168px", height: "fit-content" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuUM6Vi-MrqR5rLO93d_UNy920Cr4JKt60w&usqp=CAU" alt="kick_start" onClick={handleClick} />
                     </div></div>
                 {/*Second row content  */}
-                <div class="d-flex justify-content-around align-items-center flex-wrap" style={{ marginTop: "3vh" }}>
-                    <div className='image'>
-                    <img style={{ width: "11vw" }} src={atcoder} alt="at_coder" onClick={handleClick} />
+                <div className="d-flex justify-content-around align-items-center flex-wrap">
+                    <div className='image'style={{backgroundColor : "white", margin: "10px"}}>
+                    <img style={{ width: "168px" }} src={atcoder} alt="at_coder" onClick={handleClick} />
                     </div>
-                    <div className='image'  style={{padding: "15.32px 1vw"}}>
-                        <img style={{ width: "10vw", height : "40px" }} src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png" alt="code_chef" onClick={handleClick} />
+                    <div className='image'  style={{padding: "15.32px 1vw", backgroundColor : "white", margin: "10px"}}>
+                        <img style={{ width: "168px", height : "40px" }} src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png" alt="code_chef" onClick={handleClick} />
                     </div>
-                    <div className='image' >
-                        <img style={{ width: "11vw", height: "fit-content" }} src="https://images.ctfassets.net/kbkgmx9upatd/61FRsAdFv2jjoXw5UxZne6/a73fff395a8a1674e73c727d20bf1998/topcoder.logo.png" alt="top_coder" onClick={handleClick} />
+                    <div className='image' style={{backgroundColor : "white", margin: "10px"}} >
+                        <img style={{ width: "168px", height: "fit-content" }} src="https://images.ctfassets.net/kbkgmx9upatd/61FRsAdFv2jjoXw5UxZne6/a73fff395a8a1674e73c727d20bf1998/topcoder.logo.png" alt="top_coder" onClick={handleClick} />
                     </div></div>
             </div>
-            <div className="container my-5">{loader && <Spinner />}
+            <div style={{display: "block", margin: "auto"}}>
+            {loader && <Spinner />}
+            </div>
+            <div className="container my-5">
                 <table className="table table-striped table-bordered table-primary text-dark table-hover" style={{ borderColour: "white" }}>
                     <thead>
                         <tr>
@@ -95,7 +98,6 @@ export default function Data() {
                         {check && data.map((each => {
                             let sdt = new Date(each.start_time)
                             let edt = new Date(each.end_time)
-                            console.log(sdt.toTimeString())
                             return (
                                 <Elements
                                     key={each.url}

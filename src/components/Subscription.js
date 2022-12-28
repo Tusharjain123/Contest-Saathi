@@ -21,7 +21,7 @@ export default function Subscription() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoader(true)
-    const response = await fetch(`${process.env.REACT_APP_host}/subscribe`, {
+    const response = await fetch(`http://localhost:5000/api/auth/subscribe`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -51,33 +51,33 @@ export default function Subscription() {
       }, 5000);
     }
   }
-  return (<>
+  return (<>class=
   <div style={{position : "absolute", top : "7vh", width : "100%"}}>
-    {success && <div class="alert alert-success" role="alert">
+    {success && <div className="alert alert-success" role="alert">
       Congratulations You have successfully subscribed.<br></br>
       Email has been sent.
     </div>}
-    {error && <div class="alert alert-danger" role="alert">
+    {error && <div className="alert alert-danger" role="alert">
       Sorry a user with this Email is already exist!!!
     </div>}
-    {genErr && <div class="alert alert-danger" role="alert">
+    {genErr && <div className="alert alert-danger" role="alert">
       Something went wrong <br></br>
       Internal Server Error <br></br>
       Please try again
     </div>}
     {loader && <Spinner/>}
     </div>
-    <div class="container_">
-      <h1 class="heading">Subscription Form</h1>
-      <p class="subheading">You will get Information regarding upcoming contest and reminder</p>
-      <form class="form" onSubmit={handleSubmit}>
+    <div className="container_">
+      <h1 className="heading">Subscription Form</h1>
+      <p className="subheading">You will get Information regarding upcoming contest and reminder</p>
+      <form className="form" onSubmit={handleSubmit}>
         <div className="cont">
-          <label for="name">Name: </label>
-          <input style={{ padding: "5px" }} type="text" name="name" id="name" value={name} onChange={handleChange} />
+          <label htmlFor="name">Name: </label>
+          <input style={{ padding: "5px" }} type="text" name="name" id="name" value={name} onChange={handleChange} required/>
         </div>
         <div className="cont">
-          <label for="email">Email: </label>
-          <input style={{ padding: "5px" }} type="email" name="email" id="email" value={email} onChange={handleChange} />
+          <label htmlFor="email">Email: </label>
+          <input style={{ padding: "5px" }} type="email" name="email" id="email" value={email} onChange={handleChange} required/>
         </div>
         <button className='btn__' type="submit"> Subscribe</button>
       </form>
