@@ -21,7 +21,7 @@ export default function Subscription() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoader(true)
-    const response = await fetch(`http://localhost:5000/api/auth/subscribe`, {
+    const response = await fetch(`${process.env.REACT_APP_host}/subscribe`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,19 +36,19 @@ export default function Subscription() {
       setUser("")
       setTimeout(() => {
         setSuccess(false)
-      }, 5000);
+      }, 6000);
     }
     else if (response.status === 400) {
       setError(true)
       setTimeout(() => {
         setError(false)
-      }, 5000);
+      }, 6000);
     }
     else {
       setGenErr(true)
       setTimeout(() => {
         setGenErr(false)
-      }, 5000);
+      }, 6000);
     }
   }
   return (<>class=
@@ -58,7 +58,8 @@ export default function Subscription() {
       Email has been sent.
     </div>}
     {error && <div className="alert alert-danger" role="alert">
-      Sorry a user with this Email is already exist!!!
+      Either A user with this Email is already exist<br></br>
+      or You have enter an invalid email 
     </div>}
     {genErr && <div className="alert alert-danger" role="alert">
       Something went wrong <br></br>
@@ -85,4 +86,3 @@ export default function Subscription() {
   </>
   )
 }
-

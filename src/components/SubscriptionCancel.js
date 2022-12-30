@@ -17,7 +17,7 @@ export default function SubscriptionCancel() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoader(true)
-      const response = await fetch(`${process.env.REACT_APP_host}/unsubscribeMe`, {
+      const response = await fetch(`${process.env.REACT_APP_delete}/unsubscribeMe`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -74,4 +74,3 @@ export default function SubscriptionCancel() {
   </>
   )
 }
-

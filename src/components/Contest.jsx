@@ -88,7 +88,7 @@ export default function Data() {
                             <th scope="col">Serial number</th>
                             <th scope="col">Contest Name</th>
                             <th scope="col">Date </th>
-                            <th scope="col">Time</th>
+                            <th scope="col">Time(IST 24 hr format)</th>
                             <th scope="col">Duration</th>
                             <th scope="col">Status</th>
                             <th scope="col">Contest Url</th>

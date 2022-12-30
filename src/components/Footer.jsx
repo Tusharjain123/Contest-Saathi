@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div style={{color : "white", textAlign : 'center', backgroundColor: "transparent",marginTop: "9vh" , width: "98vw", fontFamily: "'Roboto Mono', monospace"}}>
     <div >
-      ©️Contest Saathi 2023 
+      ©️ Contest Saathi 2023 
     </div>
     <div>
         Follow me on   
