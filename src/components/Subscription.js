@@ -10,6 +10,7 @@ export default function Subscription() {
   const [error, setError] = useState(false)
   const [genErr, setGenErr] = useState(false)
   const [loader,setLoader] = useState(false)
+  const [emailerr, setemailerr] = useState(false)
   const handleChange = (e) => {
     if (e.target.name === "name") {
       setUser(e.target.value)
@@ -44,6 +45,12 @@ export default function Subscription() {
         setError(false)
       }, 6000);
     }
+    else if (response.status === 406) {
+      setemailerr(true)
+      setTimeout(() => {
+        setemailerr(false)
+      }, 6000);
+    }
     else {
       setGenErr(true)
       setTimeout(() => {
@@ -58,8 +65,11 @@ export default function Subscription() {
       Email has been sent.
     </div>}
     {error && <div className="alert alert-danger" role="alert">
-      Either A user with this Email is already exist<br></br>
-      or You have enter an invalid email 
+    A user with this Email is already exist!!!
+    </div>}
+    {emailerr && <div className="alert alert-danger" role="alert">
+    Invalid Email<br></br>
+    Please check your email
     </div>}
     {genErr && <div className="alert alert-danger" role="alert">
       Something went wrong <br></br>
