@@ -61,8 +61,7 @@ export default function Subscription() {
   return (<>class=
   <div style={{position : "absolute", top : "7vh", width : "100%"}}>
     {success && <div className="alert alert-success" role="alert">
-      Congratulations You have successfully subscribed.<br></br>
-      Email has been sent.
+    Verification Email Sent
     </div>}
     {error && <div className="alert alert-danger" role="alert">
     A user with this Email is already exist!!!
