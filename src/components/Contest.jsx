@@ -10,7 +10,10 @@ export default function Data() {
     const [data, setData] = useState()
     async function contestData(value) {
         const contest_data = await fetch(process.env.REACT_APP_contest + value);
-        const dat = await contest_data.json()
+        var dat = await contest_data.json()
+        if (value ==="code_chef" || value === "leet_code"){
+            dat = dat.reverse()
+        }
         if (dat.length === 0) {
             setData([{
                 name: "No Contest",
