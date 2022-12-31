@@ -54,10 +54,10 @@ export default function Data() {
     return (
         <div>
             {/* First Row content */}
-            <div className="container text-dark rounded p-4" style={{ backgroundColor: "transparent", minWidth: "551px" }}>
+            <div className="container text-dark rounded p-4" style={{ backgroundColor: "transparent"}}>
                 <h1 className='text-center' style={{ marginBottom: "2vh", color: "white" }}>Select the contest website</h1>
                 <div className="d-flex justify-content-around align-items-center flex-wrap">
-                    <div className='image' style={{padding: "20px 1vw", backgroundColor : "white", margin: "10px"}} >
+                    <div className='image' style={{padding: "17px 1vw", backgroundColor : "white", margin: "10px"}} >
                         <img style={{ width: "168px", height: "fit-content"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Codeforces_logo.svg/2560px-Codeforces_logo.svg.png" alt="codeforces" onClick={handleClick} />
                     </div>
                     <div className='image'  style={{padding: "15px 1vw", backgroundColor : "white", margin: "10px"}}>
@@ -74,8 +74,8 @@ export default function Data() {
                     <div className='image'style={{backgroundColor : "white", margin: "10px"}}>
                     <img style={{ width: "168px" }} src={atcoder} alt="at_coder" onClick={handleClick} />
                     </div>
-                    <div className='image'  style={{padding: "15.32px 1vw", backgroundColor : "white", margin: "10px"}}>
-                        <img style={{ width: "168px", height : "40px" }} src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png" alt="code_chef" onClick={handleClick} />
+                    <div className='image'  style={{padding: "8px 1vw", backgroundColor : "white", margin: "10px"}}>
+                        <img style={{ width: "168px" }} src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png" alt="code_chef" onClick={handleClick} />
                     </div>
                     <div className='image' style={{backgroundColor : "white", margin: "10px"}} >
                         <img style={{ width: "168px", height: "fit-content" }} src="https://images.ctfassets.net/kbkgmx9upatd/61FRsAdFv2jjoXw5UxZne6/a73fff395a8a1674e73c727d20bf1998/topcoder.logo.png" alt="top_coder" onClick={handleClick} />
@@ -85,7 +85,7 @@ export default function Data() {
             {loader && <Spinner />}
             </div>
             <div className="container my-5">
-                <table className="table table-striped table-bordered table-primary text-dark table-hover" style={{ borderColour: "white" }}>
+                <table className="table table-striped table-bordered table-primary text-dark table-hover tabledata" style={{ borderColour: "white" }}>
                     <thead>
                         <tr>
                             <th scope="col">Serial number</th>

@@ -88,3 +88,18 @@ select {
     box-shadow: 0px 0px 20px 5px rgb(160, 160, 246);
     border-radius: 30px;
 }
+@media screen and (max-width : 680px) {
+    .tabledata {
+        font-size: 2vw !important;
+    }
+    .image{
+        width: 14vw;
+        min-width: 13vh;
+    }
+    .image > img{
+        /* min-height: 5vh; */
+        width: 12vw !important;
+        min-width: 11vh;
+    }
+    
+}
