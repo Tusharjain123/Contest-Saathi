@@ -114,7 +114,7 @@ export default function Subscription() {
             <option value='Kick Start' >Kick Start</option>
           </select>
         </div>
-        <div className="cont" >
+        <div className="cont">
           <label htmlFor="contest">Alert: </label>
           <input style={{ padding: "2px",width: "24vw" }} type="text" name="alert" id="alert" value= {alert} readOnly/>
           <button className='btn__' style={{backgroundColor : "transparent", color: "white", border: "none"}} onClick={(e)=>{ e.preventDefault(); let n = alert.split(",");n.pop(); setAlert(n.join(","))}}><i class="fa-sharp fa-solid fa-delete-left"></i></button>

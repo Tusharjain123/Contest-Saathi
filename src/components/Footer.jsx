@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div style={{color : "white", textAlign : 'center', backgroundColor: "transparent",marginTop: "9vh" , width: "98vw", fontFamily: "'Roboto Mono', monospace"}}>
+    <div style={{color : "white", textAlign : 'center', backgroundColor: "transparent",width: "98vw", fontFamily: "'Roboto Mono', monospace",  position: "absolute",margin: "10px 5px", bottom: "0px"}}>
     <div >
       ©️ Contest Saathi 2023 
     </div>
