@@ -9,11 +9,26 @@ export default function Subscription() {
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
   const [genErr, setGenErr] = useState(false)
-  const [loader,setLoader] = useState(false)
+  const [loader, setLoader] = useState(false)
   const [emailerr, setemailerr] = useState(false)
+  const [alert, setAlert] =useState()
   const handleChange = (e) => {
     if (e.target.name === "name") {
       setUser(e.target.value)
+    }
+    else if (e.target.name === "contest"){
+      if (!alert){
+        setAlert(e.target.value)
+      }
+      else{
+        if(alert.includes(e.target.value)){
+          let new_alert = alert.split(",").filter((ele)=>{return ele!==e.target.value})
+          setAlert(new_alert.join(","))
+        }
+        else{
+          setAlert(alert + ","+ e.target.value)
+        }
+      }
     }
     else {
       setEmail(e.target.value)
@@ -27,7 +42,7 @@ export default function Subscription() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({name, email})
+      body: JSON.stringify({ name, email, alert })
     })
     setLoader(false)
     if (response.status === 200) {
@@ -59,23 +74,22 @@ export default function Subscription() {
     }
   }
   return (<>class=
-  <div style={{position : "absolute", top : "7vh", width : "100%"}}>
-    {success && <div className="alert alert-success" role="alert">
-    Verification Email Sent
-    </div>}
-    {error && <div className="alert alert-danger" role="alert">
-    A user with this Email is already exist!!!
-    </div>}
-    {emailerr && <div className="alert alert-danger" role="alert">
-    Invalid Email<br></br>
-    Please check your email
-    </div>}
-    {genErr && <div className="alert alert-danger" role="alert">
-      Something went wrong <br></br>
-      Internal Server Error <br></br>
-      Please try again
-    </div>}
-    {loader && <Spinner/>}
+    <div style={{ position: "absolute", top: "7vh", width: "100%" }}>
+      {success && <div className="alert alert-success" role="alert">
+        Verification Email Sent
+      </div>}
+      {error && <div className="alert alert-danger" role="alert">
+        A user with this Email is already exist!!!
+      </div>}
+      {emailerr && <div className="alert alert-danger" role="alert">
+        Invalid Email or alert field is empty
+      </div>}
+      {genErr && <div className="alert alert-danger" role="alert">
+        Something went wrong <br></br>
+        Internal Server Error <br></br>
+        Please try again
+      </div>}
+      {loader && <Spinner />}
     </div>
     <div className="container_">
       <h1 className="heading">Subscription Form</h1>
@@ -83,13 +97,31 @@ export default function Subscription() {
       <form className="form" onSubmit={handleSubmit}>
         <div className="cont">
           <label htmlFor="name">Name: </label>
-          <input style={{ padding: "5px" }} type="text" name="name" id="name" value={name} onChange={handleChange} required/>
+          <input style={{ padding: "5px" }} type="text" name="name" id="name" value={name} onChange={handleChange} required />
         </div>
         <div className="cont">
           <label htmlFor="email">Email: </label>
-          <input style={{ padding: "5px" }} type="email" name="email" id="email" value={email} onChange={handleChange} required/>
+          <input style={{ padding: "5px" }} type="email" name="email" id="email" value={email} onChange={handleChange} required />
         </div>
-        <button className='btn__' type="submit"> Subscribe</button>
+       
+        <div className="cont">
+        <label htmlFor="contest">Select: </label>
+          <select name="contest" id="contest" onChange={handleChange}>
+            <option disabled selected>Select multiple option</option>
+            <option value='Code Chef' >Code Chef</option>
+            <option value='Codeforces' >Codeforces</option>
+            <option value='Leet Code'>Leet Code</option>
+            <option value='Kick Start' >Kick Start</option>
+          </select>
+        </div>
+        <div className="cont" >
+          <label htmlFor="contest">Alert: </label>
+          <input style={{ padding: "2px",width: "24vw" }} type="text" name="alert" id="alert" value= {alert} readOnly/>
+          <button className='btn__' style={{backgroundColor : "transparent", color: "white", border: "none"}} onClick={(e)=>{ e.preventDefault(); let n = alert.split(",");n.pop(); setAlert(n.join(","))}}><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+        </div>
+          <div>
+        <button className='btn__' type="submit">Subscribe</button>
+          </div>
       </form>
     </div>
   </>

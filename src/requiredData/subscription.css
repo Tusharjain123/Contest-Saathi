@@ -28,6 +28,12 @@
     border-bottom: 1px solid white;
     margin-top: 1.5vh;
 }
+.cont>select{
+    width: 26vw;
+    outline: none;
+    border: none;
+    margin-top: 1.5vh;
+}
 
 .btn__{
     width: fit-content;
@@ -39,7 +45,7 @@
     border-color: white;
     color: white;
     outline: none;
-    margin-top: 5vh;
+    margin-top: 1vh;
 }
 
 label[for=email] {
