@@ -9,6 +9,7 @@ import {
 import Subscription from './components/Subscription';
 import SubscriptionCancel from './components/SubscriptionCancel';
 import Background from './components/Background';
+import Update from './components/Update';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <Route path="/" element={<Background/>}/>
       <Route path="/contest" element={<Contest/>}/>
       <Route path='/subscription' element = {<Subscription/>}/>
+      <Route path='/update' element = {<Update/>}/>
       <Route path='/unsubscribe' element = {<SubscriptionCancel/>}/>
     </Routes>
     </Router>

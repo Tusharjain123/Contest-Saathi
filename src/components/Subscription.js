@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import "../requiredData/subscription.css"
 import Spinner from './Spinner';
+import { Link } from 'react-router-dom';
 
 export default function Subscription() {
   const [name, setUser] = useState()
@@ -73,7 +74,9 @@ export default function Subscription() {
       }, 6000);
     }
   }
-  return (<>class=
+  return (
+  <>
+  <Link to="/update"><button style={{margin: "0px 3vw",padding: "5px" , float: "right", borderRadius: "10px", color : "white", backgroundColor: "transparent", borderColor: "white", fontSize: "10px"}}> Want to update Your Alert Choice?</button></Link>
     <div style={{ position: "absolute", top: "7vh", width: "100%" }}>
       {success && <div className="alert alert-success" role="alert">
         Verification Email Sent
@@ -105,8 +108,8 @@ export default function Subscription() {
         </div>
        
         <div className="cont">
-        <label htmlFor="contest">Select: </label>
-          <select name="contest" id="contest" onChange={handleChange}>
+        <label htmlFor="contest" style={{marginRight : "10px"}}>Select: </label>
+          <select name="contest" id="contest" onChange={handleChange} >
             <option disabled selected>Select multiple option</option>
             <option value='Code Chef' >Code Chef</option>
             <option value='Codeforces' >Codeforces</option>
