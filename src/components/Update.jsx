@@ -49,7 +49,7 @@ const Update = () => {
             setEmail("")
             setTimeout(() => {
                 setSuccess(false)
-              }, 5000);
+            }, 5000);
 
         }
         else {
@@ -58,7 +58,7 @@ const Update = () => {
             setMsg(response.msg)
             setTimeout(() => {
                 setError(false)
-              }, 5000);
+            }, 5000);
         }
     }
     return (
@@ -81,20 +81,19 @@ const Update = () => {
                         <input style={{ padding: "5px" }} type="email" name="email" id="email" value={email} onChange={handleChange} required />
                     </div>
 
-                    <div className="cont">
-                        <label htmlFor="contest">Select: </label>
-                        <select name="contest" id="contest" onChange={handleChange}>
-                            <option disabled selected>Select multiple option</option>
-                            <option value='Code Chef' >Code Chef</option>
-                            <option value='Codeforces' >Codeforces</option>
-                            <option value='Leet Code'>Leet Code</option>
-                            <option value='Kick Start' >Kick Start</option>
-                        </select>
-                    </div>
-                    <div className="cont">
+                    <div style={{ margin: "auto" }}>
                         <label htmlFor="contest">Alert: </label>
-                        <input style={{ padding: "2px", width: "24vw" }} type="text" name="alert" id="alert" value={alert} readOnly />
-                        <button className='btn__' style={{ backgroundColor: "transparent", color: "white", border: "none" }} onClick={(e) => { e.preventDefault(); let n = alert.split(","); n.pop(); setAlert(n.join(",")) }}><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                        <span className="dropdown">
+                            <button className="btn btn-secondary dropdown-toggle xyz" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Select Multiple
+                            </button>
+                            <ul className="dropdown-menu xyz">
+                                <li><div style={{ marginLeft: "7px" }}>Codeforces <input type="checkbox" name='contest' style={{ float: "right", marginRight: "9px", marginTop: "7px" }} value='Codeforces' onClick={handleChange} /></div> </li>
+                                <li><div style={{ marginLeft: "7px" }} >Codechef <input type="checkbox" name='contest' style={{ float: "right", marginRight: "9px", marginTop: "7px" }} value='Code Chef' onClick={handleChange} /></div> </li>
+                                <li><div style={{ marginLeft: "7px" }} > Leetcode <input type="checkbox" name='contest' style={{ float: "right", marginRight: "9px", marginTop: "7px" }} value='Leet Code' onClick={handleChange} /></div></li>
+                                <li><div style={{ marginLeft: "7px" }} > Kickstart <input type="checkbox" name='contest' style={{ float: "right", marginRight: "9px", marginTop: "7px" }} value='Kick Start' onClick={handleChange} /></div></li>
+                            </ul>
+                        </span>
                     </div>
                     <div>
                         <button className='btn__' type="submit">Update</button>

@@ -55,3 +55,9 @@ label[for=email] {
 .container_>.heading{
     margin-bottom: 2.5vh;
 }
+
+.xyz{
+    width: 26vw;
+    margin-left: 10px;
+    min-width: 189px;
+}
