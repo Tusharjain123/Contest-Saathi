@@ -9,3 +9,13 @@ Contest Saathi allows enthusiasts of competitive programming to keep up with the
 <br><br>
 <div>
 Deployment Status: <br>Frontend : Hosted on Firebase<br>Backend: Hosted on Render </div>
+
+
+<div>
+<h2>For running this site on your local machine.</h2>
+For installing dependencies
+<div>Step 1: npm i</div>
+For starting the web app
+<div>Step 2: npm start</div
+
+</div>
