@@ -117,6 +117,7 @@ export default function Subscription() {
               <li><div style={{ marginLeft: "7px" }} >Codechef <input type="checkbox"  name='contest'style={{ float: "right", marginRight: "9px", marginTop: "7px" }} value='Code Chef' onClick={handleChange} /></div> </li>
               <li><div style={{ marginLeft: "7px" }} > Leetcode <input type="checkbox" name='contest' style={{ float: "right", marginRight: "9px", marginTop: "7px" }} value='Leet Code' onClick={handleChange} /></div></li>
               <li><div style={{ marginLeft: "7px" }} > Kickstart <input type="checkbox" name='contest' style={{ float: "right", marginRight: "9px", marginTop: "7px" }} value='Kick Start' onClick={handleChange} /></div></li>
+              <li><div style={{ marginLeft: "7px" }} > ATCoder<input type="checkbox" name='contest' style={{ float: "right", marginRight: "9px", marginTop: "7px" }} value='AtCoder' onClick={handleChange} /></div></li>
             </ul>
           </span>
           </div>
