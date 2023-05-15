@@ -66,9 +66,7 @@ export default function Data() {
                     <div className='image'  style={{padding: "11px 1vw", backgroundColor : "white", margin: "10px"}}>
                         <img style={{ width: "168px", height: "fit-content" }} src="https://assets.leetcode.com/static_assets/public/webpack_bundles/images/logo-dark.e99485d9b.svg" alt="leet_code" onClick={handleClick} />
                     </div>
-                    <div className='image'  style={{padding: "9px 1vw", backgroundColor : "white", margin: "10px"}}>
-                        <img style={{ width: "168px", height: "fit-content" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuUM6Vi-MrqR5rLO93d_UNy920Cr4JKt60w&usqp=CAU" alt="kick_start" onClick={handleClick} />
-                    </div></div>
+                   </div>
                 {/*Second row content  */}
                 <div className="d-flex justify-content-around align-items-center flex-wrap">
                     <div className='image'style={{backgroundColor : "white", margin: "10px"}}>
