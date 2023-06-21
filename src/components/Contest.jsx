@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Spinner from './Spinner'
 import "../requiredData/contest.css"
 import Elements from './Elements'
-import atcoder from "../requiredData/atcoder.png"
 
 export default function Data() {
     const [check, setCheck] = useState(false)
@@ -70,7 +69,7 @@ export default function Data() {
                 {/*Second row content  */}
                 <div className="d-flex justify-content-around align-items-center flex-wrap">
                     <div className='image'style={{backgroundColor : "white", margin: "10px"}}>
-                    <img style={{ width: "168px" }} src={atcoder} alt="at_coder" onClick={handleClick} />
+                    <img style={{ width: "168px" }} src="/atcoder.png" alt="at_coder" onClick={handleClick} />
                     </div>
                     <div className='image'  style={{padding: "8px 1vw", backgroundColor : "white", margin: "10px"}}>
                         <img style={{ width: "168px" }} src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png" alt="code_chef" onClick={handleClick} />

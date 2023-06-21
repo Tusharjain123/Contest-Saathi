@@ -21,7 +21,6 @@ export default function Navbar() {
           <Link className="nav-link" to="/subscription">Subscription</Link>
           </li>
         </ul>
-        
       </div>
     </div>
   </nav>
