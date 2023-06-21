@@ -3,7 +3,6 @@ import React from 'react';
 import "./App.css"
 import Contest from "./components/Contest"
 import {
-  BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
