@@ -11,15 +11,7 @@ import Subscription from './components/Subscription';
 import SubscriptionCancel from './components/SubscriptionCancel';
 import Background from './components/Background';
 import Update from './components/Update';
-import { Suspense } from 'react';
-import Spinner from './components/Spinner';
 
-
-  // const [isClient, setIsClient] = useState(false);
-
-  // useEffect(() => {
-  //   setIsClient(true);
-  // }, []);
 function App() {
   return (
     <>
